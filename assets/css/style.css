@@ -1288,8 +1288,14 @@ section {
   justify-content: center;
 }
 
+.instagram{
+  font-size: 24px;
+}
+
 .button-languaje{
   margin-left: 40px;
+  font-size: 22px;
+  font-family: futuraBook;
 }
 
 .call-action-area-collections{
@@ -1347,5 +1353,24 @@ section {
   .footer-container-logo{
     display: flex;
     justify-content: center;
+  }
+
+  .size-font-section{
+    font-size: 4.3rem;
+  }
+
+  .dropdown{
+    padding: 1rem 0;
+  }
+
+  .item-dropdown-menu{
+    font-size: 16px;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  #header {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
   }
 }
