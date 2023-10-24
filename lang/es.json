@@ -1,0 +1,13 @@
+{
+    "locale": {
+        "locale": "es-ES"
+    },
+    "menu": {
+        "menu-main-about": "Nosotros",
+        "menu-main-collection": "Colecciones",
+        "menu-main-elements": "Elementos",
+        "menu-main-material": "Materiales",
+        "menu-main-accesories": "Accesorios",
+        "menu-main-download": "Descargas"
+    }
+}
