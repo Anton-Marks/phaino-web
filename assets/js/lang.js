@@ -20,17 +20,30 @@ const fetchContent = async (optionLang) => {
     
 };
 
-const translateMenu = (options) => {
+const setTranslateMenu = (options) => {
+
     Object.entries(options).forEach(([key, val]) => {
         document.querySelector(`#${baseWorld}${key}`).textContent = val
-    })
+    });
+    
+}
+
+const setTranslateSections = (options) => {
+
+    Object.entries(options).forEach(([key, val]) => {
+        document.querySelector(`#${baseWorld}${key}`).textContent = val
+    });
 
 }
 
 const translatePage = ( data ) => {
 
     if (Object.keys(data.menu).length > 0) {
-        translateMenu(data.menu)
+        setTranslateMenu(data.menu)
+    }
+
+    if (Object.keys(data.sections).length > 0) {
+        setTranslateSections(data.sections)
     }
 
 };

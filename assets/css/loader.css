@@ -1,0 +1,144 @@
+/* Absolute Center Spinner */
+.loading {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 1);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 auto;
+    z-index: 9999;
+}
+/*
+html,
+body.loading {
+    overflow: hidden !important;
+}*/
+
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.loader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.5;
+    background-color: black;
+}
+
+.loader span:nth-child(1) {
+    animation: loader-1 4s linear infinite;
+}
+
+.loader span:nth-child(2) {
+    animation: loader-2 4s linear infinite;
+}
+
+.loader span:nth-child(3) {
+    animation: loader-3 4s linear infinite;
+}
+
+.loader span:nth-child(4) {
+    animation: loader-4 4s linear infinite;
+}
+
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.dot {
+    position: absolute;
+    top: calc(50% - (2px * var(--n)));
+    left: calc(50% - (2px * var(--n)));
+    width: calc(4px * var(--n));
+    height: calc(4px * var(--n));
+    border-radius: calc(2px * var(--n));
+    background-color: red;
+}
+
+.dot:nth-child(1) {
+    --n: 1;
+    background-color: black;
+}
+
+.dot:nth-child(2) {
+    --n: 2;
+}
+
+.dot:nth-child(3) {
+    --n: 3;
+}
+
+.dot:nth-child(4) {
+    --n: 4;
+}
+
+.dot:nth-child(5) {
+    --n: 5;
+}
+
+.dot:nth-child(6) {
+    --n: 6;
+}
+
+.dot:nth-child(7) {
+    --n: 7;
+}
+
+.dot:nth-child(8) {
+    --n: 8;
+}
+
+.dot:nth-child(9) {
+    --n: 9;
+}
+
+.dot:nth-child(10) {
+    --n: 10;
+}
+
+.dot:nth-child(11) {
+    --n: 11;
+}
+
+.dot:nth-child(12) {
+    --n: 12;
+}
+
+.dot:nth-child(13) {
+    --n: 13;
+}
+
+.dot:nth-child(14) {
+    --n: 14;
+}
+
+.dot:nth-child(15) {
+    --n: 15;
+}
+
+.dot:nth-child(16) {
+    --n: 16;
+}
+
+.dot:nth-child(17) {
+    --n: 17;
+}

@@ -9,5 +9,10 @@
         "menu-main-material": "Materiales",
         "menu-main-accesories": "Accesorios",
         "menu-main-download": "Descargas"
+    },
+    "sections": {
+        "section-title-collections": "Colecciones",
+        "section-title-wall": "Muro",
+        "section-title-organizers": "Organizadores"
     }
 }
