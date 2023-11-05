@@ -6,7 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Phaino Web Project</title>
-  <meta name="description"content="The firm phaino arises in 2009 as a design project of &quot;PHENOTYPE architectural design&quot;, with over 3 years focused exclusively to the study, material selection and process development for the definition of the first kitchen collections.">
+  <meta name="description"
+    content="The firm phaino arises in 2009 as a design project of &quot;PHENOTYPE architectural design&quot;, with over 3 years focused exclusively to the study, material selection and process development for the definition of the first kitchen collections.">
   <meta name="keywords" content="design, kitchen, countertop, user, working, Morelia">
   <meta property="og:url" content="http://phaino.mx/">
   <meta property="og:type" content="website">
@@ -40,13 +41,42 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/loader.css" rel="stylesheet">
+
+  <script src="./assets/js/controls.js" defer></script>
+
+
+  <style>
+
+
+  </style>
 </head>
 
 <body>
-  <div class="loading" id="phaino-loader-wrapper">
-    <img src="./assets/img/phaino-logo.svg" alt="Icon plus" id="phaino-main-icon-loader" style="position: absolute;">
-  </div>
 
+  <!--<div class="loading" id="phaino-loader-wrapper">
+    <img src="./assets/img/phaino-logo.svg" alt="Icon plus" id="phaino-main-icon-loader" style="position: absolute;">
+  </div>-->
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+    <path fill="#B3B2B3" class="back"
+      d="M17.5.7C8.3.7.7 8.3.7 17.5s7.5 16.8 16.8 16.8 16.8-7.5 16.8-16.8C34.4 8.3 26.8.7 17.5.7zm0 31.7c-8.2 0-14.9-6.7-14.9-14.9S9.3 2.6 17.5 2.6s14.9 6.7 14.9 14.9-6.7 14.9-14.9 14.9z">
+    </path>
+
+  </svg>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+    <linearGradient id="b" gradientUnits="userSpaceOnUse" y1="17.571" x2="35.014" y2="17.571">
+      <stop offset="0" stop-color="#805B0B" />
+      <stop offset=".746" stop-color="#DEB822" />
+      <stop offset="1" stop-color="#FFD92A" />
+    </linearGradient>
+    <path fill="red" class="back"
+      d="M33.6 35l1.4-1.4-16.1-16L35 1.6 33.6.1 17.5 16.2 1.4.1 0 1.6l16.1 16L0 33.6 1.4 35l16.1-16" />
+    <path fill="#B3B3B3" class="front"
+      d="M33.6 35l1.4-1.4-16.1-16L35 1.6 33.6.1 17.5 16.2 1.4.1 0 1.6l16.1 16L0 33.6 1.4 35l16.1-16" />
+  </svg>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -54,7 +84,7 @@
 
       <div class="logo me-auto">
         <a href="index.html">
-          <img src="assets/img/phaino-logo.svg" alt="Phaino Logo" class="img-fluid" id="phaino-main-logo">
+          <img src="assets/img/Phaino_Big.png" alt="Phaino Logo" class="img-fluid" id="phaino-main-logo">
         </a>
       </div>
 
@@ -91,7 +121,7 @@
               <li><a href="#" class="item-dropdown-submenu">extintor</a></li>
             </ul>
           </li>
-          
+
           <li class="dropdown">
             <a href="javascript:void(0)">
               <span class="item-dropdown-menu" id="phaino-menu-main-elements">
@@ -149,8 +179,8 @@
               <li><a href="#" class="item-dropdown-submenu">catalogs</a></li>
             </ul>
           </li>
-          
-        
+
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -158,7 +188,8 @@
       <div class="header-social-links d-flex align-items-center">
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
 
-        <a href="javascript:void(0)" class="button-languaje" id="localization-switcher-phaino" data-default-i18n="en" data-option-i18n="0">
+        <a href="javascript:void(0)" class="button-languaje" id="localization-switcher-phaino" data-default-i18n="en"
+          data-option-i18n="0">
           es/en
         </a>
       </div>
@@ -189,8 +220,64 @@
       </div>
     </section>
 
-    <section id="collection-body-collection" class="d-flex flex-column justify-content-center align-items-center section-body-collection">
-      
+    <section id="collection-body-collection" 
+    class="d-flex flex-column justify-content-center align-items-center section-body-collection"
+    style="background-image: url(assets/img/renders/a/circle/block-a/left/left.jpg);">
+      <div class="main-container-controls">
+        <div class="container-main-right-controls">
+          <div class="container-right-center">
+
+          </div>
+          <div class="container-right-right">
+            <div class="container-right-center-pos">
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" class="icon-ctr-pointer" onclick="clickedCircle()">
+                  <path fill="#707070" d="M17.5.6C8.2.6.6 8.2.6 17.5s7.6 16.9 16.9 16.9 16.9-7.6 16.9-16.9C34.5 8.2 26.9.6 17.5.6zm0 31.8c-8.2 0-14.9-6.7-14.9-14.9S9.3 2.6 17.5 2.6s14.9 6.7 14.9 14.9-6.7 14.9-14.9 14.9z" id="ctrl-circle-c">
+                  </path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" class="icon-ctr-pointer" onclick="clickedClose()">
+                  <path fill="#ffffff" d="M33.6 35l1.4-1.4-16.1-16L35 1.6 33.6.1 17.5 16.2 1.4.1 0 1.6l16.1 16L0 33.6 1.4 35l16.1-16" id="ctrl-close-c"></path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" viewBox="2 0 40 35" onclick="clickedTriangle()" class="icon-ctr-pointer">
+                  <path fill="#ffffff" d="M22 0L2 34.5l40-.1L22 0zm0 4.2l16.4 28.2H5.7L22 4.2z" id="ctrl-triangle-c"></path>
+                </svg>
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="icon-ctr-pointer" onclick="clickedSquare()">
+                 <path fill="#ffffff" class="front" d="M0 .2V35h35V.2H0zm32.9 32.7H2.1V2.3h30.8v30.6z" id="ctrl-square-c"></path>
+                </svg>
+
+            </div>
+          </div>
+        </div>
+        <div class="container-main-bottom-controls">
+          <div class="container-center-bottom-controls">
+            <div class="container-first-controls align-end-right">
+              <span class="phaino-letter-control one-opt-letp-p on-lter-lft" data-ctrl-ltr="a" id="ltr-left-a">A</span>
+              <span class="phaino-letter-control one-opt-letp-p off-lter-lft" data-ctrl-ltr="b" id="ltr-left-b">B</span>
+              <span class="phaino-letter-control one-opt-letp-p off-lter-lft" data-ctrl-ltr="d" id="ltr-left-d">D</span>
+              <span class="phaino-letter-control one-opt-letp-p off-lter-lft" data-ctrl-ltr="e" id="ltr-left-e">E</span>
+            </div>
+            <div class="container-middle-controls">
+              <div class="phaino-control-square sq-opt-sd-p mx-3 off-side" data-ctrl-side="-left" data-side="left" id="side-left-controls"></div>
+              
+              <div class="phaino-control-rectangle sq-opt-sd-p off-side off-center" data-ctrl-side="-center" data-side="center" id="side-center-controls"></div>
+
+              <div class="phaino-control-square sq-opt-sd-p mx-3 off-side" data-ctrl-side="-right" data-side="right" id="side-right-controls"></div>
+
+            </div>
+            <div class="container-second-controls align-end-left">
+              <span class="phaino-letter-control sec-opt-letp-p off-lter-rgt" data-ctrl-ltr-sec="-right,a" id="ltr-right-a">A</span>
+              <span class="phaino-letter-control sec-opt-letp-p off-lter-rgt" data-ctrl-ltr-sec="-right,b" id="ltr-right-b">B</span>
+              <span class="phaino-letter-control sec-opt-letp-p off-lter-rgt" data-ctrl-ltr-sec="-right,d" id="ltr-right-d">D</span>
+              <span class="phaino-letter-control sec-opt-letp-p off-lter-rgt" data-ctrl-ltr-sec="-right,e" id="ltr-right-e">E</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="d-flex flex-column section-title-collection">
@@ -210,17 +297,17 @@
     <!-- End Section Collections -->
 
     <!-- Section Wall -->
-      <section id="wall-section" class="d-flex flex-column">
-        <div class="container text-center text-md-left">
-          <div class="row title-section-organizer mt-3">
-            <div class="col-lg-10 col-md-10 d-flex offset-md-1 offset-lg-1 align-items-stretch">
-              <span class="size-font-section" id="phaino-section-title-wall">
-                Wall
-              </span>
-            </div>
+    <section id="wall-section" class="d-flex flex-column">
+      <div class="container text-center text-md-left">
+        <div class="row title-section-organizer mt-3">
+          <div class="col-lg-10 col-md-10 d-flex offset-md-1 offset-lg-1 align-items-stretch">
+            <span class="size-font-section" id="phaino-section-title-wall">
+              Wall
+            </span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     <!-- End Section wall -->
 
     <!-- Section Organizers -->

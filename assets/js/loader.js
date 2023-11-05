@@ -1,15 +1,15 @@
-const loaderWrapper = document.querySelector('#phaino-loader-wrapper');
+//const loaderWrapper = document.querySelector('#phaino-loader-wrapper');
 
-const fade = loaderWrapper.animate([
+/*const fade = loaderWrapper.animate([
   { opacity: 1 },
   ], {
     duration: 5000,
 		easing: "ease-in"
   }
-)
+)*/
 
 // Remove the element to allow clicking the main content.
-fade.addEventListener("finish", () => loaderWrapper.remove())
+//fade.addEventListener("finish", () => loaderWrapper.remove())
 
 
 /*function moveLoaderMainIcon() {

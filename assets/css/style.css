@@ -168,7 +168,7 @@ a:hover {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 55px;
 }
 
 /*--------------------------------------------------------------
@@ -456,7 +456,6 @@ a:hover {
 #collection-body-collection {
   width: 100%;
   height: 85vh;
-  background: url("../img/hero-bg.png") center center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -1315,8 +1314,149 @@ section {
 }
 
 
-@media (prefers-color-scheme: dark) {
-  #header {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-  }
+.main-container-controls{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.container-main-right-controls{
+  display: flex;
+  height: 92%;
+}
+
+.container-main-bottom-controls{
+  display: flex;
+  justify-content: center;
+  height: 8%;
+}
+
+.container-center-bottom-controls{
+  width: 35%;
+  display: flex;
+}
+
+.container-first-controls, .container-middle-controls, .container-second-controls{
+  display: flex;
+}
+
+.align-end-right{
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.align-end-left{
+  padding-left: 15px;
+}
+
+.container-first-controls, .container-second-controls{
+  width: 30%;
+  align-items: flex-start;
+}
+.container-middle-controls{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.phaino-letter-control{
+  text-align: left;
+  font-family: futuraMedium;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 100%;
+  letter-spacing: 8px;
+}
+
+
+.on-lter-lft {
+  color: #707070;
+    opacity: 1;
+}
+
+.on-lter-rgt {
+  color: #707070;
+    opacity: 1;
+}
+
+
+.off-lter-lft{
+  color: #FFFFFF !important;
+    opacity: 1;
+}
+
+.off-lter-rgt{
+  color: #FFFFFF !important;
+  opacity: 1;
+}
+
+
+.on-side{
+  background: #707070 0% 0% no-repeat padding-box;
+}
+
+.off-side{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.on-center {
+  border-top: 3px solid #707070;
+  border-left: 3px solid #707070;
+  border-right: 3px solid #707070;
+
+  background-color: transparent !important;
+}
+
+.off-center{
+  border-top: 3px solid #FFFFFF;
+  border-left: 3px solid #FFFFFF;
+  border-right: 3px solid #FFFFFF;
+
+  background-color: transparent !important;
+}
+
+
+.phaino-control-square{
+  width:27px;
+  height: 27px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.phaino-control-rectangle {
+  width: 88px;
+  height: 28px;
+  opacity: 1;
+
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+.container-right-center{
+  width: 95%;
+}
+
+.container-right-right{
+  width: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container-right-center-pos{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+
+.icon-ctr-pointer {
+  cursor: pointer;
 }
