@@ -169,7 +169,7 @@ if ( optionLetterOne.length > 0) {
 
 
             letterOption = e.target.getAttribute("data-ctrl-ltr");
-            insideBlock = changeInsideBlock(letterOption);
+            insideBlock = changeInsideBlock("a");
 
             let name = '';
             if (nameFileSecond.length > 0) {
@@ -223,7 +223,7 @@ if (optionLetterSecond.length > 0) {
       el.addEventListener("click", (e) => {
         
           
-          removeClsActiveLetterLeft();
+          //removeClsActiveLetterLeft();
           removeClsActiveLetterRight();
 
           addClsActiveLtr(e.target.id);
@@ -231,8 +231,8 @@ if (optionLetterSecond.length > 0) {
           const dataEl = e.target.getAttribute("data-ctrl-ltr-sec");
           const arrData = dataEl.split(",")
           
-          letterOption = arrData[1];;
-          insideBlock = changeInsideBlock(letterOption);
+          insideBlock = changeInsideBlock(arrData[1]);
+
 
           let name = '';
           if (nameFileSecond.length > 0) {
@@ -344,7 +344,7 @@ const clickedSquare = () => {
 
 const generatePath = (letter, shade, block, side, file) => {
     const path = `${basePath}${letter}/${shade}/${block}/${side}/${file}`;
-    
     const reference = "#collection-body-collection";
+    
     document.querySelector(reference).style.backgroundImage = `url(${path})`;
 };
