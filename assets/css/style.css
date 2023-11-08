@@ -145,11 +145,20 @@ a:hover {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 99px;
+  height: 70px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-white{
   background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.nav-brown{
+  background: #d3cece 0% 0% no-repeat padding-box;
+  opacity: .9;
 }
 
 #header .logo h1 {
@@ -168,7 +177,7 @@ a:hover {
 }
 
 #header .logo img {
-  max-height: 55px;
+  max-height: 50px;
 }
 
 /*--------------------------------------------------------------
@@ -238,7 +247,7 @@ a:hover {
 .item-dropdown-menu {
     font-family: futuraBook;
     color: #000000;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .item-dropdown-submenu{
@@ -528,10 +537,6 @@ a:hover {
   #system-section {
     height: calc(100vh - 70px);
   }
-}
-
-@media (max-width: 768px) {
-  
 }
 
 /*--------------------------------------------------------------
@@ -1025,10 +1030,84 @@ section {
   color: #534f4f;
 }
 
+.m-controls-center {
+  display: none !important;
+}
+
+.w-controls-center {
+  display: block;
+}
+
 @media (max-width: 768px) {
+
+  .menu-nav-width {
+    width: 90%;
+  }
+
+  #collection-body-collection{
+    height: 175px;
+  }
+
+  .container-main-bottom-controls{
+    margin-bottom: 5px;
+  }
+
+  .container-main-right-controls {
+    height: 100% !important;
+  }
+
+  .container-center-bottom-controls{
+    width: 80% !important;
+  }
+
+  .phaino-letter-control {
+    font-size: 12px !important;
+  }
+
+  .phaino-control-square{
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  .phaino-control-rectangle {
+    width: 39px !important;
+    height: 11px !important;
+  }
+
+  .align-end-right {
+    justify-content: flex-start !important;
+    padding: 0 !important;
+  }
+
+  .align-end-left {
+    padding-left: 0 !important;
+  }
+
+  .container-right-center {
+    width: 90% !important;
+  }
+
+  .container-right-center-pos{
+    height: 80% !important;
+  }
+
+  .ctrl-square-c, .ctrl-triangle-c, .ctrl-close-c, .ctrl-circle-c{
+    height: 25px;
+    width: 25px;
+  }
+
+  .w-controls-center {
+    display: none;
+  }
+
+  .m-controls-center{
+    display: block;
+    background-color: #c3bfbf
+  }
 
   .text-collections{
     width: 100%;
+    font-size: 12px !important;
   }
 
   .footer-links{
@@ -1066,7 +1145,7 @@ section {
   }
 
   .size-font-section{
-    font-size: 4.3rem;
+    font-size: 3rem;
   }
 
   .dropdown{

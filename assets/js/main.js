@@ -8,6 +8,23 @@
 (function() {
   "use strict";
 
+
+
+  const header = document.getElementById("header");
+
+  document.addEventListener("scroll", function () {
+    // Get the scroll position
+    let scrollPos = window.scrollY;
+
+    if (scrollPos > 100) {
+      header.classList.remove('nav-white');
+      header.classList.add('nav-brown');
+    } else {
+       header.classList.add("nav-white");
+       header.classList.remove("nav-brown");
+    }
+  });
+
   /**
    * Easy selector helper function
    */
