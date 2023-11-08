@@ -1097,11 +1097,11 @@ section {
   }
 
   .w-controls-center {
-    display: none;
+    display: none !important;
   }
 
   .m-controls-center{
-    display: block;
+    display: flex !important;
     background-color: #c3bfbf
   }
 
