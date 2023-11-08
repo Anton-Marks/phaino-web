@@ -7,10 +7,15 @@
 */
 (function() {
   "use strict";
-
-
+  let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   const header = document.getElementById("header");
+
+  if (dark) {
+    header.classList.add("nav-f-white");
+  }
+
+  
 
   document.addEventListener("scroll", function () {
     // Get the scroll position
