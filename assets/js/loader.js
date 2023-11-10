@@ -1,15 +1,40 @@
-//const loaderWrapper = document.querySelector('#phaino-loader-wrapper');
+const loaderWrapper = document.querySelector('#phaino-loader-wrapper');
 
-/*const fade = loaderWrapper.animate([
-  { opacity: 1 },
+const fade = loaderWrapper.animate([
+  { opacity: 0 },
   ], {
-    duration: 5000,
+    duration: 3000,
 		easing: "ease-in"
   }
-)*/
+)
 
+/*setTimeout(() => {
+  document
+    .querySelector("#phaino-section-title-collections")
+    .classList.add("slide-in-bottom");
+  
+  console.log('aded');
+}, 500);*/
 // Remove the element to allow clicking the main content.
-//fade.addEventListener("finish", () => loaderWrapper.remove())
+fade.addEventListener("finish", () => {
+
+  /*document
+    .querySelector(".container-main-bottom-controls")
+    .classList.add("fade-in");*/
+  
+  document
+    .querySelector("#p-slide-out-top-p1")
+    .classList.add("slide-out-top-p1");
+  
+  document
+    .querySelector("#p-slide-out-top-system")
+    .classList.add("slide-out-top-system");
+  
+  loaderWrapper.remove();
+
+  
+  
+})
 
 
 /*function moveLoaderMainIcon() {

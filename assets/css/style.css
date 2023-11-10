@@ -706,6 +706,7 @@ section {
     font-size: 12px !important;
   }
 
+  
   .phaino-control-square{
     width: 11px !important;
     height: 11px !important;
@@ -734,8 +735,8 @@ section {
   }
 
   .ctrl-square-c, .ctrl-triangle-c, .ctrl-close-c, .ctrl-circle-c{
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
   }
 
   .w-controls-center {
@@ -762,16 +763,20 @@ section {
 
   .container-system{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .system-p1{
-    font-size: 7cm;
+    font-size: 2em !important;
     line-height: 90%;
+
+    margin-left: 80px;
+    margin-right: 25px;
+    letter-spacing: -40px;
   }
   
   .system-system{
-    font-size: 3em;
+    font-size: 1.2em;
     line-height: 90%;
   }
 
@@ -787,7 +792,7 @@ section {
   }
 
   .size-font-section{
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 
   .dropdown{
@@ -816,9 +821,6 @@ section {
   display: flex;
   justify-content: center;
   height: 8%;
-
-  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.3s both;
-    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.3s both;
 }
 
 .container-center-bottom-controls{

@@ -53,9 +53,16 @@
 
 <body>
 
-  <!--<div class="loading" id="phaino-loader-wrapper">
-    <img src="./assets/img/phaino-logo.svg" alt="Icon plus" id="phaino-main-icon-loader" style="position: absolute;">
-  </div>-->
+  <div class="loading" id="phaino-loader-wrapper">
+
+    <img src="./assets/img/Phaino_Isotipo.png" alt="Icon plus" id="phaino-main-icon-loader" style="position: absolute; margin-bottom: 85px;" height="80px">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -183,11 +190,11 @@
   <main id="main mt-5">
 
     <!-- Section Collections -->
-    <section class="d-flex flex-column section-title-collection">
+    <section class="d-flex flex-column section-title-collection r-m-m">
       <div class="container text-center text-md-left">
         <div class="row title-section-organizer">
           <div class="col-lg-10 col-md-10 d-flex align-items-stretch">
-            <span class="size-font-section line-height-section color-gray-bold" id="phaino-section-title-collections">
+            <span class="size-font-section line-height-section color-gray-bold slide-in-bottom" id="phaino-section-title-collections">
               Collections
             </span>
           </div>
@@ -200,12 +207,12 @@
         <div class="container-main-right-controls">
           <div class="container-right-center">
             <div class="container text-center text-md-left container-system">
-              <p class="system-p1 slide-out-top-p1">P1</p>
-              <p class="system-system slide-out-top-system">System</p>
+              <p class="system-p1" id="p-slide-out-top-p1">P1</p>
+              <p class="system-system" id="p-slide-out-top-system">System</p>
             </div>
           </div>
           <div class="container-right-right">
-            <div class="container-right-center-pos">
+            <div class="container-right-center-pos fade-in">
 
 
               <svg width="36px" height="36px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-ctr-pointer ctrl-circle-c" onclick="clickedCircle()">
@@ -417,7 +424,7 @@
             </div>
           </div>
         </div>
-        <div class="container-main-bottom-controls w-controls-center">
+        <div class="container-main-bottom-controls w-controls-center fade-in">
           <div class="container-center-bottom-controls">
             <div class="container-first-controls align-end-right">
               <span class="phaino-letter-control one-opt-letp-p on-lter-lft" data-ctrl-ltr="a" id="ltr-left-a">A</span>
@@ -446,7 +453,7 @@
       </div>
     </section>
 
-    <div class="container-main-bottom-controls m-controls-center">
+    <div class="container-main-bottom-controls m-controls-center fade-in">
       <div class="container-center-bottom-controls" style="margin-top: 5px;">
         <div class="container-first-controls align-end-right">
           <span class="phaino-letter-control one-opt-letp-p on-lter-lft" data-ctrl-ltr="a" id="ltr-left-a">A</span>
@@ -502,7 +509,7 @@
       <div class="container text-center text-md-left">
         <div class="row title-section-organizer mt-3">
           <div class="col-lg-10 col-md-10 d-flex offset-md-1 offset-lg-1 align-items-stretch">
-            <span class="size-font-section" id="phaino-section-title-wall">
+            <span class="size-font-section" id="phaino-section-title-wall" style="color: rgba(255, 255, 255, .5)">
               Wall
             </span>
           </div>
