@@ -1,7 +1,7 @@
 const loaderWrapper = document.querySelector('#phaino-loader-wrapper');
 
 const fade = loaderWrapper.animate([
-  { opacity: 0 },
+  { opacity: 1 },
   ], {
     duration: 3000,
 		easing: "ease-in"

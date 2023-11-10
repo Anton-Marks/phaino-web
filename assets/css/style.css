@@ -706,10 +706,11 @@ section {
     font-size: 12px !important;
   }
 
-  
+
   .phaino-control-square{
     width: 11px !important;
     height: 11px !important;
+    background-color: #fff !important;
   }
 
   .phaino-control-rectangle {
