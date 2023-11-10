@@ -20,7 +20,7 @@ fade.addEventListener("finish", () => {
     .querySelector("#p-slide-out-top-system")
     .classList.add("slide-out-top-system");
   
-  //loaderWrapper.remove();
+  loaderWrapper.remove();
 
 })
 
