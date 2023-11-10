@@ -8,19 +8,9 @@ const fade = loaderWrapper.animate([
   }
 )
 
-/*setTimeout(() => {
-  document
-    .querySelector("#phaino-section-title-collections")
-    .classList.add("slide-in-bottom");
-  
-  console.log('aded');
-}, 500);*/
+
 // Remove the element to allow clicking the main content.
 fade.addEventListener("finish", () => {
-
-  /*document
-    .querySelector(".container-main-bottom-controls")
-    .classList.add("fade-in");*/
   
   document
     .querySelector("#p-slide-out-top-p1")
@@ -30,10 +20,8 @@ fade.addEventListener("finish", () => {
     .querySelector("#p-slide-out-top-system")
     .classList.add("slide-out-top-system");
   
-  loaderWrapper.remove();
+  //loaderWrapper.remove();
 
-  
-  
 })
 
 
