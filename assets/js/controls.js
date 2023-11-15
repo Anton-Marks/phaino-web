@@ -1,3 +1,6 @@
+// constant for base path to get complete path images collections
+const basePath = "assets/img/renders/";
+
 // special functions for get active letter, side and shade
 const getActiveLetter = () => {
   if (document.querySelectorAll(".on-lter-lft").length > 0) {
@@ -47,7 +50,6 @@ const removeClsSides = () => {
 
   if (sides.length > 0) {
     sides.forEach((el) => {
-
       if (el.hasAttribute("fill")) {
         el.setAttribute("fill", "#FFFFFF");
       }
@@ -56,13 +58,11 @@ const removeClsSides = () => {
         el.classList.remove("on-center");
         el.classList.add("off-center");
       }
-      
     });
   }
 };
 
 // special function to add class active by letter
-
 const addClsActiveLtr = (reference) => {
   const arrParams = reference.split("-");
   const cls = arrParams[1] === "left" ? "on-lter-lft" : "on-lter-rgt";
@@ -76,8 +76,8 @@ const addClsActiveSide = (reference) => {
   const arrParams = reference.split("-");
 
   console.log({ reference });
-  
-  return
+
+  return;
   if (arrParams[1] === "center") {
     document.querySelector(`#${reference}`).classList.remove("off-side");
     document.querySelector(`#${reference}`).classList.remove("off-center");
@@ -90,6 +90,22 @@ const addClsActiveSide = (reference) => {
   }
 };
 
+// function to retunrn one number between 1 and 10
+const getRandomNumberWall = () => {
+  const number = Math.floor(Math.random() * 10) + 1;
+  return number === 10 ? number : `0${number}`;
+};
+
+const assignAleatoryImgWall = () => {
+  const img = `Img_${getRandomNumberWall()}.jpg`;
+  const reference = "#wall-section";
+  const path = `${basePath}wall/${img}`;
+
+  document.querySelector(reference).style.backgroundImage = `url(${path})`;
+};
+
+assignAleatoryImgWall();
+
 // constants for structure name and path for get name file considering all options posibles
 let letterOption = "a";
 let shadeOption = "circle";
@@ -97,9 +113,6 @@ let insideBlock = `block-${letterOption}`;
 let sideOption = "left";
 let nameFile = getActiveLetter();
 let nameFileSecond = "";
-
-// constant for base path to get complete path images collections
-const basePath = "assets/img/renders/";
 
 // constants with name to ID for geometics controls right
 const square = "#ctrl-square-c,fill";
@@ -114,30 +127,26 @@ const qSelector = (el) => {
 
 // special function to change fill to each SVG
 const changeFillSvg = (elArr, fill) => {
-    const [el, reference] = elArr.split(",")
+  const [el, reference] = elArr.split(",");
   qSelector(el).getAttributeNode(reference).value = fill;
 };
 
 // special function to chnage name inside block option
-
 const changeInsideBlock = (newLetter) => {
   return `block-${newLetter}`;
 };
 
 // special function to combine name with both options
-
 const combineNameWithBothOptions = (newOption) => {
   return `${getActiveOnlyLetter()}${newOption}.jpg`;
 };
 
 // special function to clean second name in file name
-
 const cleanFileName = () => {
   return getActiveLetter();
 };
 
 // special functions for change option and combination each block
-
 const optionLetterOne = document.querySelectorAll(".one-opt-letp-p");
 
 if (optionLetterOne.length > 0) {
@@ -168,7 +177,6 @@ const optionsSide = document.querySelectorAll(".sq-opt-sd-p");
 if (optionsSide.length > 0) {
   optionsSide.forEach((el) => {
     el.addEventListener("click", (e) => {
-
       nameFileSecond = e.target.getAttribute("data-ctrl-side");
       sideOption = e.target.getAttribute("data-side");
 
