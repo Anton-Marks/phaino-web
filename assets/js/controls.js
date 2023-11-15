@@ -43,20 +43,20 @@ const removeClsActiveLetterRight = () => {
 };
 
 const removeClsSides = () => {
-  const sides = document.querySelectorAll(".sq-opt-sd-p.on-side");
+  const sides = document.querySelectorAll(".sq-opt-sd-p");
 
   if (sides.length > 0) {
     sides.forEach((el) => {
-      if (el.getAttribute("data-ctrl-side") === "-center") {
-        el.classList.remove("on-side");
-        el.classList.remove("on-center");
 
-        el.classList.add("off-side");
-        el.classList.add("off-center");
-      } else {
-        el.classList.remove("on-side");
-        el.classList.add("off-side");
+      if (el.hasAttribute("fill")) {
+        el.setAttribute("fill", "#FFFFFF");
       }
+
+      if (el.getAttribute("data-side")) {
+        el.classList.remove("on-center");
+        el.classList.add("off-center");
+      }
+      
     });
   }
 };
@@ -75,6 +75,9 @@ const addClsActiveLtr = (reference) => {
 const addClsActiveSide = (reference) => {
   const arrParams = reference.split("-");
 
+  console.log({ reference });
+  
+  return
   if (arrParams[1] === "center") {
     document.querySelector(`#${reference}`).classList.remove("off-side");
     document.querySelector(`#${reference}`).classList.remove("off-center");
@@ -82,8 +85,8 @@ const addClsActiveSide = (reference) => {
     document.querySelector(`#${reference}`).classList.add("on-side");
     document.querySelector(`#${reference}`).classList.add("on-center");
   } else {
-    document.querySelector(`#${reference}`).classList.remove("off-side");
-    document.querySelector(`#${reference}`).classList.add("on-side");
+    document.querySelector(`#${reference}`).setAttribute("fill", "#707070");
+    //document.querySelector(`#${reference}`).classList.add("on-side");
   }
 };
 
@@ -165,6 +168,7 @@ const optionsSide = document.querySelectorAll(".sq-opt-sd-p");
 if (optionsSide.length > 0) {
   optionsSide.forEach((el) => {
     el.addEventListener("click", (e) => {
+
       nameFileSecond = e.target.getAttribute("data-ctrl-side");
       sideOption = e.target.getAttribute("data-side");
 
