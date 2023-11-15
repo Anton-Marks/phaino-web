@@ -3,18 +3,22 @@
 --------------------------------------------------------------*/
 /* Firefox */
 @media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: light;
+  body{
+    background-color: red ;
   }
 }
 
 /* Chrome */
 @media (forced-colors: active) {
-  :root {
-    color-scheme: light;
-  }
+  body {
+      background-color: red;
+    }
 }
 
+
+@media (prefers-color-scheme: dark) {
+  /* Your css */
+}
 @font-face {
   font-family: futuraLight;
   src: url(../fonts/futura-light.ttf);
