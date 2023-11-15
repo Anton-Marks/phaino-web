@@ -1,19 +1,40 @@
-/*--------------------------------------------------------------
-# Fonts available
---------------------------------------------------------------*/
+/* Manage and control dark mode*/
 /* Firefox */
 @media (prefers-color-scheme: dark) {
+
   body{
-    background-color: red ;
+    background-color: #fff;
+  }
+
+  .nav-white {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+  }
+  
+  .nav-brown {
+    background: #d3cece 0% 0% no-repeat padding-box;
+    opacity: .9;
   }
 }
 
 /* Chrome */
 @media (forced-colors: active) {
   body {
-      background-color: red;
-    }
+      background-color: #fff;
+  }
+
+  .nav-white {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+  }
+  
+  .nav-brown {
+    background: #d3cece 0% 0% no-repeat padding-box;
+    opacity: .9;
+  }
 }
+
+/*--------------------------------------------------------------
+# Fonts available
+--------------------------------------------------------------*/
 
 
 @media (prefers-color-scheme: dark) {
