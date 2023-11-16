@@ -75,9 +75,6 @@ const addClsActiveLtr = (reference) => {
 const addClsActiveSide = (reference) => {
   const arrParams = reference.split("-");
 
-  console.log({ reference });
-
-  return;
   if (arrParams[1] === "center") {
     document.querySelector(`#${reference}`).classList.remove("off-side");
     document.querySelector(`#${reference}`).classList.remove("off-center");
@@ -96,10 +93,22 @@ const getRandomNumberWall = () => {
   return number === 10 ? number : `0${number}`;
 };
 
+const assignNumberSelected = (numb) => {
+
+  const numberSel = document.querySelector(`#ctrl-wall-${numb}`);
+  numberSel.classList.remove("off-lter-lft");
+  numberSel.classList.add("on-lter-lft");
+}
+
 const assignAleatoryImgWall = () => {
-  const img = `Img_${getRandomNumberWall()}.jpg`;
+
+  const numb = getRandomNumberWall();
+
+  assignNumberSelected(numb);
+
+  const img = `Img_${numb}.webp`;
   const reference = "#wall-section";
-  const path = `${basePath}wall/${img}`;
+  const path = `${basePath}wall_b/${img}`;
 
   document.querySelector(reference).style.backgroundImage = `url(${path})`;
 };
@@ -180,9 +189,14 @@ if (optionsSide.length > 0) {
       nameFileSecond = e.target.getAttribute("data-ctrl-side");
       sideOption = e.target.getAttribute("data-side");
 
-      removeClsSides();
-      addClsActiveSide(e.target.id);
+      const dataId = e.target.hasAttribute("data-id")
+        ? e.target.getAttribute("data-id")
+        : e.target.getAttribute("id");
 
+      removeClsSides();
+      addClsActiveSide(dataId);
+
+      
       generatePath(
         letterOption,
         shadeOption,
@@ -234,10 +248,10 @@ const changeOptionByShade = (shade) => {
 };
 
 const clickedCircle = () => {
-  changeFillSvg(circle, "#FFFFFF");
-  changeFillSvg(close, "#707070");
-  changeFillSvg(triangle, "#707070");
-  changeFillSvg(square, "#707070");
+  changeFillSvg(circle, "#707070");
+  changeFillSvg(close, "#FFFFFF");
+  changeFillSvg(triangle, "#FFFFFF");
+  changeFillSvg(square, "#FFFFFF");
 
   shadeOption = "circle";
 
@@ -252,10 +266,10 @@ const clickedCircle = () => {
 };
 
 const clickedClose = () => {
-  changeFillSvg(close, "#FFFFFF");
-  changeFillSvg(circle, "#707070");
-  changeFillSvg(triangle, "#707070");
-  changeFillSvg(square, "#707070");
+  changeFillSvg(close, "#707070");
+  changeFillSvg(circle, "#FFFFFF");
+  changeFillSvg(triangle, "#FFFFFF");
+  changeFillSvg(square, "#FFFFFF");
 
   shadeOption = "close";
 
@@ -270,10 +284,10 @@ const clickedClose = () => {
 };
 
 const clickedTriangle = () => {
-  changeFillSvg(triangle, "#FFFFFF");
-  changeFillSvg(close, "#707070");
-  changeFillSvg(circle, "#707070");
-  changeFillSvg(square, "#707070");
+  changeFillSvg(triangle, "#707070");
+  changeFillSvg(close, "#FFFFFF");
+  changeFillSvg(circle, "#FFFFFF");
+  changeFillSvg(square, "#FFFFFF");
 
   shadeOption = "triangle";
 
@@ -288,10 +302,10 @@ const clickedTriangle = () => {
 };
 
 const clickedSquare = () => {
-  changeFillSvg(square, "#FFFFFF");
-  changeFillSvg(close, "#707070");
-  changeFillSvg(triangle, "#707070");
-  changeFillSvg(circle, "#707070");
+  changeFillSvg(square, "#707070");
+  changeFillSvg(close, "#FFFFFF");
+  changeFillSvg(triangle, "#FFFFFF");
+  changeFillSvg(circle, "#FFFFFF");
 
   shadeOption = "square";
 
@@ -311,3 +325,50 @@ const generatePath = (letter, shade, block, side, file) => {
 
   document.querySelector(reference).style.backgroundImage = `url(${path})`;
 };
+
+
+// special functions to change wall images
+
+const removeCurrentWallSelected = () => {
+  const currentSelected = document.querySelector(".on-lter-lft.p-w-c");
+  if (currentSelected) {
+    currentSelected.classList.remove('on-lter-lft')
+    currentSelected.classList.add("off-lter-lft");
+  }
+}
+
+const addCurrentWallSelected = ( reference ) => {
+  const currentSelected = document.querySelector(`#${reference}`);
+  if (currentSelected) {
+    currentSelected.classList.remove("off-lter-lft");
+    currentSelected.classList.add("on-lter-lft");
+  }
+};
+
+const changeBackgroundWallSelected = (reference) => {
+  
+
+  const numb = reference.split("-")[2];
+
+  assignNumberSelected(numb);
+
+  const img = `Img_${numb}.webp`;
+  const sel= "#wall-section";
+  const path = `${basePath}wall_b/${img}`;
+
+  document.querySelector(sel).style.backgroundImage = `url(${path})`;
+}
+
+const wallOptions = document.querySelectorAll(".p-w-c");
+
+if (wallOptions.length > 0) {
+  wallOptions.forEach((wall) => {
+    wall.addEventListener("click", (e) => {
+      removeCurrentWallSelected();
+      addCurrentWallSelected(e.target.id);
+      changeBackgroundWallSelected(e.target.id);
+    });
+  })
+}
+
+

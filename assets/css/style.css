@@ -715,6 +715,18 @@ section {
   display: block;
 }
 
+.container-wall{
+  height: 96%;
+}
+
+.title-section-wall{
+  height: 90%;
+}
+
+.ltr-s-0{
+  letter-spacing: 0 !important;
+}
+
 @media (max-width: 768px) {
 
   .menu-nav-width {
@@ -746,6 +758,15 @@ section {
     font-size: 10px !important;
     letter-spacing: 15px !important;
     margin-top: 2px !important;
+  }
+
+  .container-wall{
+    height: 80% !important;
+  }
+
+  
+  .phaino-wall-control{
+    font-size: 10px !important;
   }
 
   .phaino-control-rectangle {
@@ -857,8 +878,6 @@ section {
     font-size: 16px;
   }
 
-
-
   .container-middle-controls {
     width: 30%;
   }
@@ -926,21 +945,29 @@ section {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
 }
 
+.phaino-wall-control {
+  font-family: futuraMedium;
+  font-size: 17px;
+  cursor: pointer;
+  letter-spacing: 30px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
 
 .on-lter-lft {
   color: #707070;
-    opacity: 1;
+  opacity: 1;
 }
 
 .on-lter-rgt {
   color: #707070;
-    opacity: 1;
+  opacity: 1;
 }
 
 
 .off-lter-lft{
   color: #FFFFFF !important;
-    opacity: 1;
+  opacity: 1;
 }
 
 .off-lter-rgt{
@@ -1005,10 +1032,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
-
-  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.3s both;
-    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.3s both;
 }
 
 .icon-ctr-pointer {
