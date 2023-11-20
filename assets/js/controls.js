@@ -1,3 +1,8 @@
+const isMobile = () =>
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+
 // constant for base path to get complete path images collections
 const basePath = "assets/img/renders/";
 
@@ -94,14 +99,12 @@ const getRandomNumberWall = () => {
 };
 
 const assignNumberSelected = (numb) => {
-
   const numberSel = document.querySelector(`#ctrl-wall-${numb}`);
   numberSel.classList.remove("off-lter-lft");
   numberSel.classList.add("on-lter-lft");
-}
+};
 
 const assignAleatoryImgWall = () => {
-
   const numb = getRandomNumberWall();
 
   assignNumberSelected(numb);
@@ -196,7 +199,6 @@ if (optionsSide.length > 0) {
       removeClsSides();
       addClsActiveSide(dataId);
 
-      
       generatePath(
         letterOption,
         shadeOption,
@@ -326,18 +328,17 @@ const generatePath = (letter, shade, block, side, file) => {
   document.querySelector(reference).style.backgroundImage = `url(${path})`;
 };
 
-
 // special functions to change wall images
 
 const removeCurrentWallSelected = () => {
   const currentSelected = document.querySelector(".on-lter-lft.p-w-c");
   if (currentSelected) {
-    currentSelected.classList.remove('on-lter-lft')
+    currentSelected.classList.remove("on-lter-lft");
     currentSelected.classList.add("off-lter-lft");
   }
-}
+};
 
-const addCurrentWallSelected = ( reference ) => {
+const addCurrentWallSelected = (reference) => {
   const currentSelected = document.querySelector(`#${reference}`);
   if (currentSelected) {
     currentSelected.classList.remove("off-lter-lft");
@@ -346,18 +347,16 @@ const addCurrentWallSelected = ( reference ) => {
 };
 
 const changeBackgroundWallSelected = (reference) => {
-  
-
   const numb = reference.split("-")[2];
 
   assignNumberSelected(numb);
 
   const img = `Img_${numb}.webp`;
-  const sel= "#wall-section";
+  const sel = "#wall-section";
   const path = `${basePath}wall_b/${img}`;
 
   document.querySelector(sel).style.backgroundImage = `url(${path})`;
-}
+};
 
 const wallOptions = document.querySelectorAll(".p-w-c");
 
@@ -368,7 +367,5 @@ if (wallOptions.length > 0) {
       addCurrentWallSelected(e.target.id);
       changeBackgroundWallSelected(e.target.id);
     });
-  })
+  });
 }
-
-
