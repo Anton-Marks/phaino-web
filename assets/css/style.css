@@ -775,14 +775,20 @@ section {
   .phaino-control-rectangle {
     width: 45px !important;
     height: 11px !important;
-    margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
   }
 
   .on-center {
-    border-top: 2.5px solid #707070 !important;
-    border-left: 2.5px solid #707070 !important;
-    border-right: 2.5px solid #707070 !important;
+    border-top: 2.3px solid #707070 !important;
+    border-left: 2.3px solid #707070 !important;
+    border-right: 2.3px solid #707070 !important;
+  }
+
+  .off-center {
+    border-top: 2.3px solid #FFFFFF !important;
+    border-left: 2.3px solid #FFFFFF !important;
+    border-right: 2.3px solid #FFFFFF !important;
   }
 
   .align-end-right {
