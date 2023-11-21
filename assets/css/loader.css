@@ -21,7 +21,6 @@
 .container-loader-loader{
     height: 55px;
     width: 55px;
-    background-image: url('../img/loader-loader.gif');
     background-size: 100% 100%;
     padding: 0;
     background-position: center center;

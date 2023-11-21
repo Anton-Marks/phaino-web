@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", (e) => {
+
+  const sel = ".container-loader-loader";
+  let path = "assets/img/loader-loader.gif";
+
+  document.querySelector(sel).style.backgroundImage = `url(${path})`;
+
+  setTimeout(() => {
+    path = '';
+    document.querySelector(sel).style.backgroundImage = `url(${path})`;
+  }, 2590);
+});
+
 //const loaderWrapper = document.querySelector('#phaino-loader-wrapper');
 
 /*const fade = loaderWrapper.animate([
@@ -7,7 +20,6 @@
 		easing: "ease-in"
   }
 )*/
-
 
 // Remove the element to allow clicking the main content.
 /*fade.addEventListener("finish", () => {
@@ -23,7 +35,6 @@
   loaderWrapper.remove();
 
 })*/
-
 
 /*function moveLoaderMainIcon() {
   let id = null;
