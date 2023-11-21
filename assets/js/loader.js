@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
     path = '';
     document.querySelector(sel).style.backgroundImage = `url(${path})`;
   }, 2590);
+
+  setTimeout(() => {
+    document.querySelector("#phaino-loader-wrapper").remove();
+  }, 2610);
+
+  
 });
 
 //const loaderWrapper = document.querySelector('#phaino-loader-wrapper');

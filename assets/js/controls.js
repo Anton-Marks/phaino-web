@@ -369,3 +369,18 @@ if (wallOptions.length > 0) {
     });
   });
 }
+
+
+const optionsAvailable = {
+  a: {
+    circle: {
+      left:{},
+      center:{},
+      right:{},
+    },
+    close: {},
+    triangle: {},
+    square: {},
+  }
+  
+}
